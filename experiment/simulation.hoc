@@ -17,6 +17,7 @@ PRINTRATIO = 1    //set 1 to calculate and print relative peaks,
 //random number to make the simulation asynchronous
 objref randelay
 randelay = new Random()
+randelay.Random123()
 maxDelay = 0    //(ms) set maximum delay
 randelay.uniform(0,maxDelay)
 
@@ -49,12 +50,15 @@ max_distance = 400	//um
 //random number used for locating synapses
 objref ransec, ranseg
 ransec = new Random()
+ransec.Random123()
 ransec.uniform(0,nSec-1)	//generate distribution for selecting sections
 ranseg = new Random()
+ranseg.Random123()
 
 //random number used for synaptic weights
 objref ranwei
 ranwei = new Random()
+ranwei.Random123()
 ranwei.lognormal(1.6,1)
 //x0=5, mu=1.6, sigma=1 -> fitting data by Ito & Schuman
 
